@@ -9,8 +9,12 @@ document.querySelector('#app').innerHTML = `
         <ul id="order-list">
         </ul>
         <hr>
-        <div id="order-total">
-            <p>Total price:</p>
+        <div>
+            <div class="order-total">
+                <p>Total price:</p>
+                <p id="total">0</p>
+            </div>
+            <button class="order-complete-btn">Complete order</button>
         </div>
     </div>
 `

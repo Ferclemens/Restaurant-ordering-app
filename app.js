@@ -24,8 +24,11 @@ function renderMenu(array) {
   return menuHtml
 }
 
-function totalPrice() {
-  
+//total order amount
+let totalHtml = 0
+function totalOrder(price) {
+    totalHtml += price
+    document.getElementById('total').textContent = totalHtml
 }
 
 //render order list in ui
@@ -42,6 +45,8 @@ function addItemToOrder(id) {
   const itemSelected = menuArray.filter(function(item) {
     return item.id === Number(id)
   })[0]
+  totalOrder(itemSelected.price)
+  
   itemToAdd += `
     <div class="order-item">
       <div>
